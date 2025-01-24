@@ -1,0 +1,19 @@
+{
+  "name": "kchess",
+  "version": "1.0.0",
+  "description": "The best chess website ever",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmed-Wael-01/Kchess.git"
+  },
+  "author": "Ahmed-Wael-01",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ahmed-Wael-01/Kchess/issues"
+  },
+  "homepage": "https://github.com/Ahmed-Wael-01/Kchess#readme"
+}
