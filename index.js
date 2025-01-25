@@ -1,9 +1,14 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 const con = require('./db');
 
+const publicDirectory = path.join(__dirname, './public');
+app.use(express.static(publicDirectory));
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-  res.send('Welcome to hell\n');
+  res.render('index');
 });
 
 app.get('/sql', (req, res) => {
