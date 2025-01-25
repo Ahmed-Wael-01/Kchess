@@ -24,4 +24,6 @@
   .logo{
     width: 150px;
     height: 35px;
+    background-image: url('/images/logok.png');
+    background-size: cover;
   }
