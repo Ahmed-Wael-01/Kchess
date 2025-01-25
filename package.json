@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/Ahmed-Wael-01/Kchess/issues"
   },
-  "homepage": "https://github.com/Ahmed-Wael-01/Kchess#readme"
+  "homepage": "https://github.com/Ahmed-Wael-01/Kchess#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0",
+    "socket.io": "^4.8.1"
+  }
 }
