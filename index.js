@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
+app.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
 app.get('/sql', (req, res) => {
   con.query('SHOW tables', (err, result, feilds) => {
     res.send(result);
