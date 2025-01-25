@@ -1,63 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-  <link rel="stylesheet" href="/css/signup.css">
-  <link rel="stylesheet" href="/css/nav.css">
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-  <div class="navbar">
-    <div class="logo">K CHESS</div>
-    <ul class="nav-links">
-      <li><a href="/">Play</a></li>
-      <li><a href="bot.html">Bot</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="signup.html" class="signup">Sign Up/In</a></li>
-    </ul>
-  </div>
-
-  <div class="signup-container">
-    <div class="signup-form">
-      <h1>Registration Form</h1>
-      <form>
-        <div class="form-row">
-          <label for="first-name">First Name</label>
-          <input type="text" id="first-name" placeholder="Custom text">
-          <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" placeholder="Custom text">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="nav.css">
+    </head>
+    <body>
+        <script src="validation.js"></script>
+        <div class="navbar">
+            <div class="logo"><img src="logo.png" alt="logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Play</a></li>
+                <li><a href="bot.html">Bot</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="signup.html" class="signup">Sign Up/In</a></li>
+            </ul>
         </div>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="Custom text">
+        <div class="signup-container">
+            <div class="signup-form">
+                <h1 class="heading">Registration Form</h1>
+                <form>
+                    <div class="form-row w-50" >
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="Custume text" name="first-name">
+                    </div>
+                    <div class="form-row w-50">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Custume text" name="last-name">
+                    </div>
+                    <div class="form-row w-100">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Custume text" name="email">
+                    </div>
+                    <div class="form-row w-100">
+                        <label for="username">User Name</label>
+                        <input type="text" id="username" placeholder="Custume text" name="username">
+                    </div>
+                    <div class="form-row w-100">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob">
+                    </div>
+                    <div class="form-row w-50">
+                        <label for="country">Country</label>
+                        <input type="country" id="country" placeholder="Custume text" name="country">
+                    </div>
+                    <div class="form-row w-50">
+                        <label for="gender">Gender</label>
+                        <input type="text" id="gender" placeholder="Custume text" name="gender">
+                    </div>
+                    <div class="form-row w-100">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Custume text" name="password">
+                    </div>
+                    <div class="form-row w-100">
+                        <label for="re-password">Re-enter Password</label>
+                        <input type="password" id="re-password" placeholder="Custume text" name="re-password">
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
 
-        <label for="username">User Name</label>
-        <input type="text" id="username" placeholder="Custom text">
+            <hr />
 
-        <label for="dob">Date of Birth</label>
-        <input type="date" id="dob">
-
-        <div class="form-row">
-          <label for="country">Country</label>
-          <input type="text" id="country" placeholder="List here">
-          <label for="gender">Gender</label>
-          <input type="text" id="gender" placeholder="List here">
+            <div class="signup-image">
+                    <img src="Rectangle.png" alt="Chess Queen">
+                </div>
+            </div>
         </div>
-
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Custom text">
-
-        <label for="re-password">Re-enter Password</label>
-        <input type="password" id="re-password" placeholder="Custom text">
-
-        <button type="submit">Sign Up</button>
-      </form>
-    </div>
-    <div class="signup-image">
-      <img src="assets/queen.jpeg" alt="Chess Queen">
-    </div>
-  </div>
-</body>
+    </body>
 </html>

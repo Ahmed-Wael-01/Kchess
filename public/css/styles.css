@@ -1,43 +1,48 @@
 *{
+  font-family: 'Inter','Roboto', sans-serif;
   box-sizing: border-box;
 }
+
 body{
-  margin: 0 0 0 0;
+  margin: 0;
   padding: 0;
-  font-family: 'Inter','Roboto', sans-serif;
 }
 
+
 .heading{
-  font-size: 48px;
+  font-size: 36px;
 }
 
 .signup-container{
   display: flex;
+  align-items: center;
 }
 
 .form-row{
-  flex: 1 0 auto;
+  flex: 0 0 auto;
+  margin-bottom: 5px;
 }
 
 .form-row > label{
   display: block;
   font-weight: bold;
-  font-size: 24px;
-  margin-bottom: 15px;
+  font-size: 15px;
+  /* margin-bottom: 5px; */
 }
 
 .form-row > input{
+  padding: 5px;
   width: 100%;
   border: 0px;
   border-bottom: 1px solid #000;
-  margin-top: 6px;
-  font-size: 20px;
+  /* margin-top: 6px; */
+  font-size: 15px;
   outline: none;
   /* padding-right: 50%; */
 }
 
 .form-row.w-50{
-  width: 50%;
+  width: calc(50% - 10px);
 }
 .form-row.w-100{
   width: 100%;
@@ -45,6 +50,8 @@ body{
 
 .signup-form{
   width: 50%;
+  padding-left: 109px;
+  padding-right: 109px;
 }
 
 .signup-form form{
@@ -54,18 +61,30 @@ body{
   gap: 20px;
 }
 
+hr{
+  display: block;
+  color: #000;
+  width: 1px;
+  height: 70vh;
+}
+
 .signup-image{
+  display: flex;
   width: 50%;
+  height: calc(100vh - 75px);
+  justify-content: center;
+  align-items: end;
 }
 
 .signup-image img{
-  width: 100%;
+  max-width: 100%;
+  height: 100%;
 }
 
 .signup-form button {
   padding: 10px 20px;
-  margin: 0 auto;
-  font-size: 30px;
+  width: 100%;
+  font-size: 15px;
   background-color: #000;
   color: #fff;
   border: none;
