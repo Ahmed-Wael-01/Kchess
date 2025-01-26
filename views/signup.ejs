@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign Up</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="css/nav.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/nav.css">
     </head>
     <body>
         <script src="validation.js"></script>
@@ -61,6 +61,9 @@
                     </div>
                     <button type="submit">Sign Up</button>
                     <p>if you already have an account please press<a href="/login" class="login"> here</a></p>
+                    <% if (locals.message) { %>
+                        <p><%= message %></p>
+                    <% } %>
                 </form>
             </div>
 
