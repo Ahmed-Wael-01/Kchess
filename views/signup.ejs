@@ -22,14 +22,14 @@
         <div class="signup-container">
             <div class="signup-form">
                 <h1 class="heading">Registration Form</h1>
-                <form>
+                <form action="/auth/register" method="POST">
                     <div class="form-row w-50" >
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" placeholder="Custume text" name="first-name">
+                        <input type="text" id="first-name" placeholder="Custume text" name="fname">
                     </div>
                     <div class="form-row w-50">
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" placeholder="Custume text" name="last-name">
+                        <input type="text" id="last-name" placeholder="Custume text" name="lname">
                     </div>
                     <div class="form-row w-100">
                         <label for="email">Email Address</label>
@@ -57,10 +57,10 @@
                     </div>
                     <div class="form-row w-100">
                         <label for="re-password">Re-enter Password</label>
-                        <input type="password" id="re-password" placeholder="Custume text" name="re-password">
+                        <input type="password" id="re-password" placeholder="Custume text" name="rpassword">
                     </div>
                     <button type="submit">Sign Up</button>
-                    <p>if you already have an account please press<a href="login.ejs" class="login"> here</a></p>
+                    <p>if you already have an account please press<a href="/login" class="login"> here</a></p>
                 </form>
             </div>
 
