@@ -3,15 +3,20 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("index", req.user);
+    console.log(req.body);
+    res.render("index", req.body);
 });
 
 router.get("/signup", (req, res) => {
-    res.render("signup");
+    res.render("signup", req.body);
 });
 
 router.get("/login", (req, res) => {
-    res.render("login");
+    res.render("login", req.body);
+});
+
+router.get("/play", (req, res) => {
+    res.render("play", req.body);
 });
 
 router.get("/sql", (req, res) => {

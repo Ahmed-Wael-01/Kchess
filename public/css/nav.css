@@ -27,3 +27,9 @@
     background-image: url('/images/logok.png');
     background-size: cover;
   }
+
+  .big{
+    font-size: larger;
+    font-weight: 900;
+  }
+

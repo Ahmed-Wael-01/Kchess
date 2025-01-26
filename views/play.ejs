@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="tab.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/tab.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo"><img src="logo.png" alt="logo"></div>
+    <header class="navbar">
+        <div class="logo"></div>
         <ul class="nav-links">
-            <li><a href="play.html">Play</a></li>
-            <li><a href="bot.html">Bot</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="signup.html" class="signup">Sign Up/In</a></li>
+        <li><a href="/play">Play</a></li>
+        <li><a href="#bot">Bot</a></li>
+        <li><a href="#about">About</a></li>
+        <% if(locals.user){ %>
+            <li class="logout big"><%= user %></li>
+        <% } else{ %>  
+            <li><a href="/signup" class="signup">Sign Up/In</a></li>
+        <% } %>
+
         </ul>
-    </div>
+    </header>
     <div class="table-container">
         <h2 class="table-header">Lobby</h2>
         <table>
@@ -35,20 +40,7 @@
                 <td>no</td>
                 <td><button>Join</button></td>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><button>Join</button></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><button class="join-button">Join</button></td>
-            </tr>
+            
         </table>
     </div>
     <div id="popup" style="display: none;">
@@ -71,6 +63,7 @@
         <input type="password" id="password" placeholder="Custom text">
         <button>Create</button>
     </div>
-    <script src="pop.js"></script>
+    <script src="/js/pop.js"></script>
+    <script src="/js/logout.js"></script>
 </body>
 </html>

@@ -5,7 +5,6 @@ const { name } = require('ejs');
 require('dotenv').config();
 
 exports.register = (req, res) => {
-    console.log(req.body);
     const {fname, lname, email, username, dob, country, gender, password, rpassword} = req.body;
     con.query('SELECT email FROM players WHERE email = ?', [email], async (err, result) => {
         if(err) throw err;
@@ -38,14 +37,12 @@ exports.register = (req, res) => {
 };
 
 exports.login = (req, res) => {
-    console.log(req.body);
     const {usrOrEmail, password} = req.body;
     con.query(`SELECT email, nickname, password FROM players WHERE email = '${usrOrEmail}' OR nickname = '${usrOrEmail}'`, async (err, result) => {
         if(err) throw err;
         if(result.length !== 1) return res.render('login', {
             message: 'no user found'
         });
-        console.log();
         bcrypt.compare(password, result[0].password, (err, isRight) => {
             if(err) throw err;
             if(!isRight) {
@@ -54,7 +51,8 @@ exports.login = (req, res) => {
                 })
             } else {
                 const token = jwt.sign({usrOrEmail, password}, process.env.ACCESS_TOKEN_SECRET);
-                res.json({accessToken: token});
+                res.cookie('token', token, {httpOnly: true});
+                return res.render('index', {user: usrOrEmail});
                 /*return res.render('login', {
                     message: 'login success'
                 });*/
