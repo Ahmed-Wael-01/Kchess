@@ -15,6 +15,7 @@ body{
 
 .signup-container{
   display: flex;
+  align-items: center;
 }
 
 .form-row{
@@ -49,7 +50,8 @@ body{
 
 .signup-form{
   width: 50%;
-  padding: 20px 80px;
+  padding-left: 109px;
+  padding-right: 109px;
 }
 
 .signup-form form{
