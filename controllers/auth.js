@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const { name } = require('ejs');
 require('dotenv').config();
 
+//a method to validate register data and importing the new users to the database
 exports.register = (req, res) => {
     const {fname, lname, email, username, dob, country, gender, password, rpassword} = req.body;
     con.query('SELECT email FROM players WHERE email = ?', [email], async (err, result) => {
@@ -36,6 +37,7 @@ exports.register = (req, res) => {
     });
 };
 
+//a method for validating login info and generating jwt token for the user
 exports.login = (req, res) => {
     const {usrOrEmail, password} = req.body;
     con.query(`SELECT email, nickname, password FROM players WHERE email = '${usrOrEmail}' OR nickname = '${usrOrEmail}'`, async (err, result) => {
